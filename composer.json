@@ -1,0 +1,45 @@
+{
+    "name": "renanhabreu/openrest",
+    "description": "Framework PHP minimalista para APIs RESTful. Roteamento automatico, Active Record, validacao, paginacao, cliente HTTP e tratamento padronizado de erros.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "keywords": ["framework", "rest", "api", "slim", "router", "active-record", "middleware"],
+    "authors": [
+        {
+            "name": "Renan Abreu",
+            "homepage": "https://github.com/renanhabreu"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/renanhabreu/openrest/issues",
+        "source": "https://github.com/renanhabreu/openrest"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-pdo": "*",
+        "slim/slim": "^4.12",
+        "slim/psr7": "^1.6"
+    },
+    "suggest": {
+        "monolog/monolog": "Para logging estruturado com o ErrorMiddleware",
+        "vlucas/phpdotenv": "Para carregar variaveis de ambiente do .env",
+        "firebase/php-jwt": "Para autenticacao JWT com o AuthMiddleware"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenRest\\Core\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenRest\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
